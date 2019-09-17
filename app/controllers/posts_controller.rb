@@ -62,6 +62,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def user_posts
+    @posts = policy_scope(Post)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
